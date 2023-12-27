@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.title}}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-menu">
+        <nav>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </nav>
+        <div class="top-menu-content">
+            <p><b>Hi there,</b></p> 
+            <p>I’m <b>PRAYOGA ALGA VREDIZON</b></p>
+            <p class="desc">I’m a person who likes to learn about information technology like Computing, Networking and many other. </p>
+        </div>
+        <div class="sos-med">
+            <img src="/static/img/pngkey.com-instagram-png-15454.png" alt="ig-logo">
+            <img class="fb" src="/static/img/v982-d4-01.png" alt="fb-logo">
+            <img src="/static/img/pngkey.com-linked-in-icon-png-5502522.png" alt="in-logo">
+        </div>
+    </div>
+    <div class="second-menu">
+        <h1>Tech Stack that i understand</h1>
+        <div class="container">
+            <div class="content">
+                <h3 class="title">GO Programming Language</h3>
+                <p class="desc">I often using this language to build an API</p>
+            </div>
+            <div class="content">
+                <h3 class="title">MySQL Database</h3>
+                <p class="desc">I often using this DBMS to creating program that implement relational table.</p>
+            </div>
+            <div class="content">
+                <h3 class="title">Version Control Git</h3>
+                <p class="desc">I often using this Version Control to manage the code that i was writing.</p>
+            </div>
+        </div>
+    </div>
+    <div class="project-list">
+        <div class="header">
+            <div class="title">
+                <p>Project Experience</p>
+            </div>
+            <form action="" method="post">
+            <div class="tools">
+                <input type="text" placeholder="Find Projects....">
+                <a href="#">Filter</a>
+                <a href="#">Sort</a>
+            </div>
+            </form>
+        </div>
+        {{range $index, $result := .value}}
+        <div class="content">
+               <div class="left">
+                    <a href="#" class="title">{{$result.Title}}</a>
+                    {{range $i, $r := $result.Stack}}
+                    <p class="tech-stack">{{$r.Alias}}</p>
+                    {{end}}
+                    <a href="/$result.LinkGithub" class="desc">show description</a>
+               </div>
+            <div class="right">
+                <a href="#" class="created-at">Created at 20-12-2023</a>
+                <a href="#" class="see-documentation">See Documentation</a>
+                <a href="#" class="see-github">See Code on Github <img class="img" src="img/pngkey.com-github-icon-png-1787243.png" alt="github-icon"></a>
+            </div>
+            <p style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta inventore vitae consequatur nobis hic optio quod totam qui, iusto error ipsum voluptas beatae ipsam? Tempore nam velit cum assumenda?</p>
+        </div>
+        {{end}}
+        <!-- <div class="content">
+            <div class="title">
+               <div class="left">
+                    <a href="#" class="title">Todolist Rest API</a>
+                    <a href="#" class="tech-stack">GO MYSQL</a>
+                    <a href="#" class="desc">show description</a>
+               </div>
+            </div>
+            <div class="right">
+                <a href="#" class="created-at">Created at 20-12-2023</a>
+                <a href="#" class="see-documentation">See Documentation</a>
+                <a href="#" class="see-github">See Code on Github <img class="img" src="/static/img/pngkey.com-github-icon-png-1787243.png" alt="github-icon"></a>
+            </div>
+        </div> -->
+    </div>
+    <div class="project-list right">
+        <div class="header">
+            <div class="title">
+                <p>Certificates</p>
+            </div>
+            <form action="" method="post">
+            <div class="tools">
+                <input type="text" placeholder="Find Certificates....">
+                <a href="#">Filter</a>
+                <a href="#">Sort</a>
+            </div>
+            </form>
+        </div>
+        <div class="content">
+            <div class="title">
+               <div class="left">
+                    <a href="#" class="title">Dasar Pemrograman Javascript</a>
+                    <a href="#" class="desc">show description</a>
+               </div>
+            </div>
+            <div class="right">
+                <a href="#" class="created-at">Owned at 20-12-2023</a>
+            </div>
+        </div>
+    </div>
+    <div class="feedback">
+        <div class="info">
+            <h1>SEND ME A FEEDBACK</h1>
+            <p>Your feedback is very important to me for increasing and improving my ability to write code</p>
+        </div>
+        <form action="">
+            <input type="text" placeholder="Your Email...">
+            <textarea name="" id="" rows="10" placeholder="Your Message..." style="resize: none;"></textarea>
+            <button type="submit" name="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <div class="about-me">
+            <h1>Prayoga Alga Vredizon</h1>
+            <p class="desc">I'm a student from Pancasakti Tegal University with Informatic major. I likes to learn about information technology like Computing, Networking and many other. Now, i tend learn about programming language, especially with GO and Node.js. With database, i have ability to use Database Management System especially in Mysql. </p>
+            <p>Email : <a href="https://google.com">yogavredizon23@gmail.com</a></p>
+            <p>Telegram : <a href="t.me/6285865769422">Yoga Vredizon</a></p>
+        </div>
+        <div>
+            <p>Get Closer with me : </p>
+            <div class="img">
+            <img src="/static/img/pngkey.com-instagram-png-15454.png" alt="ig-logo">
+            <img class="fb" src="/static/img/v982-d4-01.png" alt="fb-logo">
+            <img src="/static/img/pngkey.com-linked-in-icon-png-5502522.png" alt="in-logo">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

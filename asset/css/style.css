@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.top-menu{
+    background-color: #000;
+    /* height: 400px; */
+    padding: 5% 10%;
+    padding-bottom: 150px;
+}
+
+nav{
+    float: right;
+}
+.hamburger{
+    display: block;
+    background-color: #D9D9D9;
+    width: 20px;
+    height: 3px;
+    margin-top: 3px;
+    border-radius: 1px;
+}
+
+.top-menu-content{
+    color: #A7A8A8;
+    padding: 10% 10%;
+    align-items: center;
+    font-size: 40px;
+}
+
+.top-menu-content p{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: lighter;
+}
+.sos-med{
+    float: right;
+    text-align: center;
+}
+.sos-med img{
+    margin: 0 5px;
+    width:20px;
+    height: 20px;
+}
+
+.sos-med .fb{
+    width: 40px;
+    height: 30px;
+}
+
+.second-menu{
+    margin-top: 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    justify-content: center;
+}
+
+.second-menu h1{
+    text-align: center;
+}
+
+.second-menu .content{
+    margin: 50px;
+    width: 250px;
+    border-bottom: 1px solid #000;
+}
+.second-menu h1{
+    font-size: 43px;
+    text-transform: uppercase;
+}
+.second-menu .content .title{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.second-menu .content p{
+    margin: 20px 0;
+}
+
+.project-list{
+    background-color: #151515;
+    max-width: 80%;
+    color: #CECECE;
+    border-radius: 0px 5px 5px 0;
+    margin: 40px 0;
+    padding-bottom: 40px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #585858;
+}
+
+.header .title{
+    font-size: 20px;
+    color: #CECECE;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header .tools input[type=text]{
+    border: 0.4px solid #A7A8A8;
+    background-color: #151515;
+    width: 300px;
+    padding: 8px 5px;
+    border-radius: 3px;
+    color: #A7A8A8;
+}
+
+.header .tools a{
+    margin-left: 8px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #585858;
+    border-radius: 3px;
+    padding: 6px 20px;
+}
+
+.project-list .content{
+    display: grid;
+    grid-template-columns: 70% auto;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #BABABA;
+    margin: 20px 70px;
+    padding: 6px 0;
+}
+.project-list .content p{
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+} 
+.project-list .content .left a, 
+.project-list .content .right a{ 
+    display: block;
+    color: #fff;
+    padding: 8px 0;
+    text-decoration: none;
+}
+.project-list .content .left .title{
+    color: #39AE99;
+    font-weight: bold;
+    font-size: 24px;
+} 
+.project-list .content .left .desc{
+    color: #0094FF;
+    font-size: 12px;
+
+} 
+
+.project-list .content .right img{
+    width: 12px;
+    height: 12px;
+}
+.content p{
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+}
+.project-list .content .right .see-documentation{
+    margin-top: 35px;   
+}
+
+.project-list .content .right .see-documentation, 
+.project-list .content .right .see-github{
+    color: #0094FF;
+    font-size: 12px;
+    padding: 4px;
+    text-align: right;
+}
+
+.right {
+    float: right;
+    position: relative;
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+}
+
+.feedback{
+    margin-top: 35%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.info{
+    text-align: center;
+}
+
+.feedback input{
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+}
+
+textarea {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px 10px;
+}
+
+button{
+    width: 100%;
+    background-color:#39AE99;
+    color: #fff;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 500px 200px;
+    color: #fff;
+    padding: 20px 30px;
+}
+
+footer img{
+    width: 20px;
+    height: 20px;
+}
+
+footer .about-me{
+    margin-right: 50px;
+}
+
+footer .fb{
+    width: 30px;
+    height: 30px;
+}
+
+footer .about-me p{
+    margin: 10px 0;
+}
+footer .about-me .desc{
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+}
