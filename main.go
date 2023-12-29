@@ -9,5 +9,6 @@ import (
 func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("asset"))))
 	http.HandleFunc("/", view.Index)
+	http.HandleFunc("/search", view.IndexSearch)
 	http.ListenAndServe(":8080", nil)
 }

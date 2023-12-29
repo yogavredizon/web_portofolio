@@ -132,7 +132,7 @@ nav{
 
 .project-list .content{
     display: grid;
-    grid-template-columns: 70% auto;
+    grid-template-columns: 50% auto;
     justify-content: space-between;
     border-bottom: 0.5px solid #BABABA;
     margin: 20px 70px;
@@ -170,16 +170,17 @@ nav{
     font-weight: 300;
     font-style: italic;
 }
-.project-list .content .right .see-documentation{
+/* .project-list .content .right .see-documentation{
     margin-top: 35px;   
+} */
+.project-list .content .right{
+    text-align: right;
 }
-
 .project-list .content .right .see-documentation, 
 .project-list .content .right .see-github{
     color: #0094FF;
     font-size: 12px;
-    padding: 4px;
-    text-align: right;
+    /* padding: 4px; */
 }
 
 .right {

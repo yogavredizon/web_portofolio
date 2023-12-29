@@ -30,10 +30,12 @@
     <div class="second-menu">
         <h1>Tech Stack that i understand</h1>
         <div class="container">
+            {{range $index, $result := .value}}
             <div class="content">
                 <h3 class="title">GO Programming Language</h3>
                 <p class="desc">I often using this language to build an API</p>
             </div>
+            {{end}}
             <div class="content">
                 <h3 class="title">MySQL Database</h3>
                 <p class="desc">I often using this DBMS to creating program that implement relational table.</p>
@@ -49,45 +51,31 @@
             <div class="title">
                 <p>Project Experience</p>
             </div>
-            <form action="" method="post">
-            <div class="tools">
-                <input type="text" placeholder="Find Projects....">
-                <a href="#">Filter</a>
-                <a href="#">Sort</a>
+            <div class="tools" >
+                <form action="/search" method="post">
+                    <input type="text" name="search" placeholder="Find Projects...." class="search">
+                    <a href="#">Filter</a>
+                    <a href="#">Sort</a>
+                </form>
             </div>
-            </form>
         </div>
         {{range $index, $result := .value}}
         <div class="content">
                <div class="left">
                     <a href="#" class="title">{{$result.Title}}</a>
-                    {{range $i, $r := $result.Stack}}
-                    <p class="tech-stack">{{$r.Alias}}</p>
+                    {{range $i, $stack := $result.Stack}}
+                    <a class="tech-stack" style="display: inline;">{{$stack.Alias}}</as>
                     {{end}}
-                    <a href="/$result.LinkGithub" class="desc">show description</a>
+                    <a href="#" class="desc">show description</a>
                </div>
             <div class="right">
-                <a href="#" class="created-at">Created at 20-12-2023</a>
+                <a href="#" class="created-at">Created at {{$result.Created_at}}</a>
                 <a href="#" class="see-documentation">See Documentation</a>
-                <a href="#" class="see-github">See Code on Github <img class="img" src="img/pngkey.com-github-icon-png-1787243.png" alt="github-icon"></a>
+                <a href="{{$result.LinkGithub}}" class="see-github" target="_blank"> See Code on Github <img class="img" src="/static/img/pngkey.com-github-icon-png-1787243.png" alt="github-icon"></a>
             </div>
             <p style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta inventore vitae consequatur nobis hic optio quod totam qui, iusto error ipsum voluptas beatae ipsam? Tempore nam velit cum assumenda?</p>
         </div>
         {{end}}
-        <!-- <div class="content">
-            <div class="title">
-               <div class="left">
-                    <a href="#" class="title">Todolist Rest API</a>
-                    <a href="#" class="tech-stack">GO MYSQL</a>
-                    <a href="#" class="desc">show description</a>
-               </div>
-            </div>
-            <div class="right">
-                <a href="#" class="created-at">Created at 20-12-2023</a>
-                <a href="#" class="see-documentation">See Documentation</a>
-                <a href="#" class="see-github">See Code on Github <img class="img" src="/static/img/pngkey.com-github-icon-png-1787243.png" alt="github-icon"></a>
-            </div>
-        </div> -->
     </div>
     <div class="project-list right">
         <div class="header">
@@ -130,7 +118,7 @@
             <h1>Prayoga Alga Vredizon</h1>
             <p class="desc">I'm a student from Pancasakti Tegal University with Informatic major. I likes to learn about information technology like Computing, Networking and many other. Now, i tend learn about programming language, especially with GO and Node.js. With database, i have ability to use Database Management System especially in Mysql. </p>
             <p>Email : <a href="https://google.com">yogavredizon23@gmail.com</a></p>
-            <p>Telegram : <a href="t.me/6285865769422">Yoga Vredizon</a></p>
+            <p>Telegram : <a href="t.me/yogavredizon">Yoga Vredizon</a></p>
         </div>
         <div>
             <p>Get Closer with me : </p>
@@ -141,5 +129,8 @@
             </div>
         </div>
     </footer>
+    <script src="/static/js/index.js">
+
+    </script>
 </body>
 </html>
